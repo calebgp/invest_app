@@ -190,14 +190,119 @@ class HomePage extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                MyAsset(),
-                MyAsset(),
-                MyAsset(),
-                MyAsset(),
-                MyAsset(),
+                MyAsset(
+                  colors: [
+                    Color(0xFFF0C635),
+                    Color(0xFFD88F38),
+                  ],
+                  path: "gold.png",
+                  plan: "Gold",
+                  returns: "30",
+                ),
+                MyAsset(
+                  colors: [
+                    Color(0xFFC9C9C9),
+                    Color(0xFF969696),
+                  ],
+                  path: "silver.png",
+                  plan: "Silver",
+                  returns: "60",
+                ),
+                MyAsset(
+                  colors: [
+                    Color(0xFFB98CF3),
+                    Color(0xFF605EE2),
+                  ],
+                  path: "platinum.png",
+                  plan: "Platinum",
+                  returns: "90",
+                  opacity: 0.2,
+                ),
               ],
             ),
-          )
+          ),
+          const Gap(40),
+          const Padding(
+            padding: EdgeInsets.only(left: 30.0),
+            child: Text(
+              'Investment Guide',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 22,
+                fontFamily: 'DM Sans',
+                fontWeight: FontWeight.w700,
+                height: 0.06,
+                letterSpacing: 0.80,
+              ),
+            ),
+          ),
+          const Gap(20),
+          const GuideWidget(
+            title: 'Basic type of investments',
+            subtitle:
+                'This is how you set your foot for 2020 Stock market recession. What’s next...',
+            path: "guide1.jpg",
+          ),
+          const Gap(15),
+          Center(
+            child: Container(
+              width: 346,
+              decoration: const ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(
+                    width: 1,
+                    strokeAlign: BorderSide.strokeAlignCenter,
+                    color: Color.fromARGB(188, 74, 74, 74),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const GuideWidget(
+            title: "How much can you start wit..",
+            subtitle:
+                "What do you like to see? It’s a very different market from 2018. The way...",
+            path: "guide2.jpg",
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 24,
+                width: 24,
+                child: SvgPicture.asset(
+                  "icons/home.svg",
+                ),
+              ),
+              label: "Home"),
+          BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 24,
+                width: 24,
+                child: SvgPicture.asset(
+                  "icons/search.svg",
+                ),
+              ),
+              label: "Product"),
+          BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 24,
+                width: 24,
+                child: SvgPicture.asset(
+                  "icons/transaction.svg",
+                ),
+              ),
+              label: "Transaction"),
+          BottomNavigationBarItem(
+            icon: SizedBox(
+              height: 24,
+              width: 24,
+              child: SvgPicture.asset("icons/account.svg"),
+            ),
+            label: "Account",
+          ),
         ],
       ),
     );
