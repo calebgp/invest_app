@@ -186,12 +186,13 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const Gap(20),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
                 MyAsset(
-                  colors: [
+                  onPressed: () {},
+                  colors: const [
                     Color(0xFFF0C635),
                     Color(0xFFD88F38),
                   ],
@@ -200,7 +201,8 @@ class HomePage extends StatelessWidget {
                   returns: "30",
                 ),
                 MyAsset(
-                  colors: [
+                  onPressed: () {},
+                  colors: const [
                     Color(0xFFC9C9C9),
                     Color(0xFF969696),
                   ],
@@ -209,7 +211,8 @@ class HomePage extends StatelessWidget {
                   returns: "60",
                 ),
                 MyAsset(
-                  colors: [
+                  onPressed: () {},
+                  colors: const [
                     Color(0xFFB98CF3),
                     Color(0xFF605EE2),
                   ],
@@ -267,16 +270,18 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
-              icon: SizedBox(
-                height: 24,
-                width: 24,
-                child: SvgPicture.asset(
-                  "icons/home.svg",
-                ),
+            icon: SizedBox(
+              height: 24,
+              width: 24,
+              child: SvgPicture.asset(
+                "icons/home.svg",
               ),
-              label: "Home"),
+            ),
+            label: "Home",
+          ),
           BottomNavigationBarItem(
               icon: SizedBox(
                 height: 24,

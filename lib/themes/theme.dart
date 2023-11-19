@@ -5,6 +5,16 @@ ThemeData myTheme = ThemeData(
   colorScheme: const ColorScheme.light(
     primary: Color(0xFF31A062),
   ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    type: BottomNavigationBarType.fixed,
+    backgroundColor: Colors.white,
+    selectedLabelStyle: TextStyle(
+      color: Color(0xFF31A05F),
+    ),
+    unselectedLabelStyle: TextStyle(
+      color: Colors.black,
+    ),
+  ),
   textTheme: TextTheme(
     bodyMedium: GoogleFonts.dmSans(
       fontSize: 16,
